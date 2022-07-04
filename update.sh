@@ -10,4 +10,4 @@ curl 'https://api.hackertarget.com/hostsearch/?q=googlevideo.com' \
 
 cat $FILE | sed -r "s/(^r[[:digit:]]+)(\.)(sn)/\1---\3-/" >> $FILE
 
-cat $FILE | sort | uniq > $FILE
+# cat $FILE | sort | uniq > $FILE
