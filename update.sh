@@ -9,3 +9,5 @@ curl 'https://api.hackertarget.com/hostsearch/?q=googlevideo.com' \
     | grep -vE "redirector|manifest" > $FILE
 
 cat $FILE | sed -r "s/(^r[[:digit:]]+)(\.)(sn)/\1---\3-/" >> $FILE
+
+cat $FILE | sort | uniq > $FILE
